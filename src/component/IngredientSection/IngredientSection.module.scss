@@ -1,0 +1,142 @@
+@import "../../style/extend";
+@import "../../style/mixin";
+
+.ingredientSection__contener {
+  width: 100%;
+  background-color: $primary_color;
+  padding: 32rem 12.8rem 43.3rem 12.8rem;
+  text-align: center;
+  border-radius: $large_block_radius;
+  color: #ffffff;
+
+  .serviceIntro__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5.5rem;
+    gap: 0;
+    .heading {
+      color: #fff;
+      @extend %sectionHeader;
+      @include styledUnderline(wavy, $secondary_color);
+      @include dot($dot_color);
+      margin-bottom: 4.47rem;
+    }
+    .intro {
+      @extend %contentText;
+      padding: 0 8.9rem;
+      margin-bottom: 3rem;
+    }
+    .btn__ourService {
+      @extend %primaryBtn;
+      padding: 3.6rem 3.234rem;
+      background-color: $secondary_color;
+      @include lineCreator(1.31px);
+      &:hover,
+      &:active {
+        background-color: #4a4a6c;
+      }
+    }
+  }
+
+  .serviceDetail__box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 7.2rem;
+    transition: all 1s;
+  }
+  .link__ingredient {
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffffff;
+    position: relative;
+    z-index: 100;
+    transition: all 0.3s;
+    @include styledUnderline(underline, $highlight_color);
+    &::before {
+      width: 104%;
+    }
+    &:hover,
+    &:active {
+      display: block;
+      margin: 0 auto;
+      transform: scale(1.1);
+    }
+  }
+}
+
+//width below 1350px
+@media (max-width: 84.375em) {
+  .ingredientSection__contener {
+    padding: 45rem 5rem 43.3rem 5rem;
+  }
+}
+//width below 1067px
+@media (max-width: 66.6875em) {
+  .ingredientSection__contener {
+    padding: 45rem 5rem 70rem 5rem;
+    .serviceDetail__box {
+      grid-template-columns: repeat(2, 1fr);
+
+      > div:nth-child(9) {
+        transform: translateX(50%);
+      }
+    }
+  }
+}
+
+//width below 900px
+@media (max-width: 56.25em) {
+  .ingredientSection__contener {
+    padding: 45rem 1rem 70rem 1rem;
+  }
+}
+
+//width below 665px
+@media (max-width: 41.5625em) {
+  .ingredientSection__contener {
+    padding: 45rem 5rem 70rem 5rem;
+    .serviceIntro__box {
+      .intro {
+        @extend %contentText;
+        padding: 0 1.5rem;
+        margin-bottom: 3rem;
+      }
+    }
+    .serviceDetail__box {
+      grid-template-columns: 1fr;
+
+      > div:nth-child(9) {
+        transform: unset;
+      }
+    }
+  }
+}
+
+//width below 428px
+@media (max-width: 26.75em) {
+  .ingredientSection__contener {
+    padding: 45rem 0rem 70rem 0rem;
+    .link__ingredient {
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+    }
+  }
+}
+
+//height below 327px; ( > 175%)
+@media (max-height: 20.4375em) {
+  .ingredientSection__contener {
+    padding: 10rem 6.8rem 56rem 6.8rem;
+  }
+}
+
+//height below 290px; ( > 200%)
+@media (max-height: 18.031em) {
+  .ingredientSection__contener {
+    padding: 10rem 0rem 66rem 0rem;
+  }
+}

@@ -1,0 +1,237 @@
+.heroSection__container {
+  position: relative;
+  background-image: url("../../images/BG.png");
+  width: 100%;
+  height: 100vh;
+  border-radius: 0 0 40px 40px;
+  z-index: 10;
+}
+.heroSection__container .heroSection__body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 0 0 40px 40px;
+}
+.heroSection__container .heroSection__body .heroSection__textBox {
+  height: 100%;
+  position: relative;
+}
+.heroSection__container .heroSection__body .heroSection__textBox .asideText {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 2.45rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #ffffff;
+  line-height: 1.9rem;
+  letter-spacing: 2.12px;
+  top: 25.15%;
+  left: 4.34%;
+  transform: rotate(-90deg) translateX(-100%);
+  transform-origin: left top;
+}
+.heroSection__container .heroSection__body .heroSection__textBox .asideText .line {
+  width: 11.3rem;
+  height: 2px;
+  background-color: #fff;
+}
+.heroSection__container .heroSection__body .heroSection__textBox .main_textBox {
+  height: 100%;
+  padding-left: 15.277%;
+  padding-top: 6.045%;
+}
+.heroSection__container .heroSection__body .heroSection__textBox .main_textBox p {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-left: 0.6rem;
+  z-index: 100;
+  position: relative;
+  margin-top: 3.4rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 3.8rem;
+  line-height: 7rem;
+  letter-spacing: 0.916667rem;
+}
+.heroSection__container .heroSection__body .heroSection__textBox .main_textBox p .lastSentence {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+}
+.heroSection__container .heroSection__body .heroSection__textBox .main_textBox p .lastSentence::before {
+  content: "";
+  position: absolute;
+  bottom: 18%;
+  left: -0.8rem;
+  height: 18%;
+  width: 103%;
+  background-color: #26c6d0;
+  z-index: -10;
+}
+.heroSection__container .heroSection__body .heroSection__textBox .main_textBox p .lastSentence::after {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  background-color: #ee6c8a;
+  position: absolute;
+  right: -1rem;
+  bottom: 25%;
+  border-radius: 50%;
+}
+@media (max-width: 32.5em) {
+  .heroSection__container .heroSection__body .heroSection__textBox .main_textBox p .lastSentence::after {
+    content: "";
+    width: 5px;
+    height: 5px;
+  }
+}
+.heroSection__container .heroSection__body .heroSection__textBox .main_textBox p .lastSentence::before {
+  width: 101%;
+}
+.heroSection__container .heroSection__body .heroSection__textBox .CTA__box {
+  position: absolute;
+  height: 100%;
+  padding-bottom: 5.2083%;
+  bottom: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1.5%;
+}
+.heroSection__container .heroSection__body .heroSection__textBox .CTA__box .link__cta {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-animation: jumping 3s ease-in infinite;
+          animation: jumping 3s ease-in infinite;
+}
+.heroSection__container .heroSection__body .heroSection__textBox .CTA__box .link__cta:hover + p {
+  transform: scale(1.1);
+}
+.heroSection__container .heroSection__body .heroSection__textBox .CTA__box p {
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.7px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffffff;
+  transition: all 0.3s;
+}
+.heroSection__container .heroSection__body .heroSection__textBox .CTA__box::after {
+  content: "";
+  color: #fff;
+  position: absolute;
+  background-color: #fff;
+  width: 1px;
+  height: 5.2428%;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (max-aspect-ratio: 100/99) {
+  .heroSection__container .heroSection__body .heroSection__textBox .main_textBox {
+    padding-top: 20%;
+  }
+  .heroSection__container .heroSection__body .heroSection__textBox .main_textBox img {
+    width: 25%;
+  }
+}
+@media (max-width: 35.5625em) {
+  .heroSection__container .heroSection__body .heroSection__textBox .main_textBox img {
+    width: 30%;
+  }
+  .heroSection__container .heroSection__body .heroSection__textBox .main_textBox p .lastSentence::before {
+    bottom: 12%;
+    height: 7%;
+  }
+  .heroSection__container .heroSection__body .heroSection__textBox .main_textBox p .lastSentence::after {
+    bottom: 14%;
+  }
+}
+@media (max-width: 25em) {
+  .heroSection__container .heroSection__body .heroSection__textBox .main_textBox p {
+    font-size: 2.6rem;
+    letter-spacing: 0.616667rem;
+  }
+  .heroSection__container .heroSection__body .heroSection__textBox .main_textBox p .lastSentence::before {
+    bottom: 8%;
+  }
+  .heroSection__container .heroSection__body .heroSection__textBox .main_textBox p .lastSentence::after {
+    bottom: 10%;
+  }
+}
+@media (max-height: 36.0625em) {
+  .heroSection__container {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .heroSection__container .heroSection__body {
+    position: static;
+    padding-bottom: 5rem;
+  }
+  .heroSection__container .heroSection__body .heroSection__textBox .CTA__box {
+    display: none !important;
+  }
+}
+@media (max-height: 10em) {
+  .heroSection__container .heroSection__body .heroSection__textBox .asideText {
+    font-size: 0.8rem;
+  }
+  .heroSection__container .heroSection__body .heroSection__textBox .asideText .line {
+    display: none;
+  }
+  .heroSection__container .heroSection__body .heroSection__textBox .main_textBox p {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+  .heroSection__container .heroSection__body .heroSection__textBox .main_textBox p .lastSentence::before {
+    bottom: 9%;
+    height: 5%;
+  }
+  .heroSection__container .heroSection__body .heroSection__textBox .main_textBox p .lastSentence::after {
+    bottom: 10%;
+  }
+}
+@-webkit-keyframes jumping {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(-25%);
+  }
+  90% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes jumping {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(-25%);
+  }
+  90% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}/*# sourceMappingURL=HeroSection.module.css.map */

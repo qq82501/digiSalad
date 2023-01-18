@@ -1,0 +1,22 @@
+.navigation__box {
+  width: 100%;
+  height: 10.638%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  z-index: 1000;
+}
+
+.homepage__main_box {
+  max-width: 1440px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+@media (max-height: 29.375em) {
+  .navigation__box {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}/*# sourceMappingURL=App.module.css.map */

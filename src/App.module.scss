@@ -1,0 +1,22 @@
+.navigation__box {
+  width: 100%;
+  height: 10.638%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  z-index: 1000;
+}
+
+.homepage__main_box {
+  max-width: 1440px;
+  // min-height: 500px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+//height below 470px (> 125%)
+@media (max-height: 29.375em) {
+  .navigation__box {
+    height: fit-content;
+  }
+}

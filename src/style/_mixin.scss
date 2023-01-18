@@ -1,0 +1,79 @@
+@import "./extend";
+
+@mixin styledUnderline($decorationStyle, $color) {
+  width: fit-content;
+  position: relative;
+  @if ($decorationStyle == underline) {
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 18%;
+      left: -0.8rem;
+      height: 18%;
+      width: 103%;
+      background-color: $color;
+      z-index: -10;
+    }
+  }
+  @if ($decorationStyle == wavy) {
+    // pic wavy connot change color!
+    @if ($decorationStyle == wavy and $color == $primary_color) {
+      border-image: url("../../images/wavy.png");
+    }
+    @if ($decorationStyle == wavy and $color == $secondary_color) {
+      border-image: url("../../images/wavy_purple.png");
+    }
+    border-width: 0 15px 15px 15px;
+    border-style: solid;
+    border-color: transparent;
+    border-image-repeat: round;
+    border-image-slice: 16;
+    padding: 0 2rem 4px 2rem;
+  }
+
+  // width below 520px
+  @media (max-width: 32.5em) {
+    @if ($decorationStyle == wavy) {
+      border-width: 0 10px 10px 10px;
+      padding: 0 2rem 0 2rem;
+    }
+  }
+  // width below 410px
+  @media (max-width: 25.625em) {
+    @if ($decorationStyle == wavy) {
+      border-width: 0 5px 5px 5px;
+      padding: 0 2rem 0 2rem;
+    }
+  }
+}
+
+@mixin dot($color) {
+  &::after {
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    background-color: $color;
+    position: absolute;
+    right: -1rem;
+    bottom: 25%;
+    border-radius: 50%;
+  }
+
+  // width below 520px
+  @media (max-width: 32.5em) {
+    &::after {
+      content: "";
+      width: 5px;
+      height: 5px;
+    }
+  }
+}
+
+@mixin lineCreator($lineWidth) {
+  &::after {
+    content: "";
+    display: block;
+    height: $lineWidth;
+    background-color: #fff;
+  }
+}

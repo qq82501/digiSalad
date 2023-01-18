@@ -1,0 +1,71 @@
+//variables
+$primary_color: #26c6d0;
+$primary_color_shadow: #23bbc6;
+$secondary_color: #585880;
+$highlight_color: #ffbc58;
+$dot_color: #ee6c8a;
+$large_block_radius: 40px;
+$button_radius: 1px;
+$primary_btn_color: #fff;
+
+//extends
+%sectionHeader {
+  font-size: 2.8rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 3.4rem;
+  letter-spacing: 3.64px;
+  color: #262626;
+}
+
+%contentText {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  letter-spacing: 1px;
+}
+
+%primaryBtn {
+  display: grid;
+  grid-template-columns: 100fr 62fr;
+  width: max-content;
+  white-space: nowrap;
+  align-items: center;
+  column-gap: 7.727%;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 2.22px;
+  border-radius: $button_radius;
+  text-transform: uppercase;
+  color: $primary_btn_color;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s;
+
+  &:hover,
+  &:active {
+    background-color: $primary_color_shadow;
+  }
+}
+
+// width below 520px
+@media (max-width: 32.5em) {
+  %sectionHeader {
+    font-size: 2rem;
+    line-height: 2.6rem;
+  }
+
+  %primaryBtn {
+    font-size: 1rem;
+    letter-spacing: 1.5px;
+  }
+}
+
+//width below 410px
+@media (max-width: 25.625em) {
+  %sectionHeader {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+  }
+}

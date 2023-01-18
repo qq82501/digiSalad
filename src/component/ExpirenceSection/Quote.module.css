@@ -1,0 +1,87 @@
+.quote__container {
+  width: 90.277%;
+  padding: 10rem;
+  background-image: url("../../images/Expirence/quote_BG.png");
+  background-position: 40% 0;
+  background-size: cover;
+  border-radius: 0 40px 40px 40px;
+  display: grid;
+  -moz-column-gap: 4.4rem;
+       column-gap: 4.4rem;
+  grid-template-columns: 28fr 72fr;
+  color: #ffffff;
+  justify-items: center;
+  text-align: center;
+}
+.quote__container .founderImage {
+  border-radius: 50%;
+  margin-top: 5.6rem;
+  margin-bottom: 3.9rem;
+}
+.quote__container .founderName {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+}
+.quote__container .founderTitle {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 2px;
+}
+.quote__container .quoteContent__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.quote__container .quoteContent__box .img__quoteMark {
+  width: 12.2615%;
+}
+.quote__container .quoteContent__box .quoteText {
+  text-align: start;
+  font-weight: 400;
+  font-size: 2.2rem;
+  line-height: 4.8rem;
+  letter-spacing: 2px;
+}
+.quote__container .quoteContent__box .quoteText span {
+  color: #ffbc58;
+}
+
+@media (max-width: 66.6875em) {
+  .quote__container {
+    grid-template-columns: unset;
+    grid-template-rows: auto 1fr;
+  }
+  .quote__container .founderImage {
+    border-radius: 50%;
+    margin-top: unset;
+    margin-bottom: 3.9rem;
+  }
+  .quote__container .quoteContent__box .img__quoteMark {
+    width: 5.2615%;
+    align-self: flex-start;
+  }
+}
+@media (max-width: 33.75em) {
+  .quote__container {
+    padding: 5rem 3rem;
+  }
+}
+@media (max-height: 14.425em) {
+  .quote__container {
+    width: 100%;
+    padding: 10rem 2rem;
+  }
+  .quote__container .founderTitle {
+    margin-bottom: 1rem;
+  }
+  .quote__container .quoteContent__box {
+    gap: 0;
+  }
+}/*# sourceMappingURL=Quote.module.css.map */

@@ -1,0 +1,107 @@
+.NavigationBar__Container {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  padding: 0 6rem;
+  align-items: center;
+  position: relative;
+
+  .logo__box {
+    width: 70%;
+    height: 100%;
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .buttonBox {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 4.4rem;
+    position: relative;
+    .btnCTA {
+      background-image: linear-gradient(90deg, #4ee5ea 3.94%, #26d0a8 94.73%);
+      width: 20rem;
+      height: 4.1rem;
+      border-radius: 2.4rem;
+      border: none;
+      text-transform: uppercase;
+      font-size: 1.4rem;
+      line-height: 1.7rem;
+      font-weight: 700;
+      letter-spacing: 1.14286px;
+      color: #ffffff;
+      cursor: pointer;
+    }
+
+    .btnMenu {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+    }
+    .btnMenu[data-modal="true"] {
+      position: fixed;
+      top: 8%;
+    }
+
+    .icon__openMenu {
+      width: 3rem;
+      height: 3rem;
+      color: black;
+      stroke-width: 2px;
+      margin-top: 15%;
+    }
+    .icon__closeMenu {
+      width: 2.4rem;
+      height: 2.4rem;
+      color: #fff;
+      stroke-width: 3px;
+    }
+  }
+}
+
+:global(.sticky) .NavigationBar__Container[data-modal="false"] {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+:global(.sticky) .NavigationBar__Container[data-modal="true"] {
+  background-color: transparent;
+}
+
+//width below
+@media (max-width: 31.25em) {
+  .NavigationBar__Container {
+    padding: 0 2rem;
+    .buttonBox {
+      gap: 2.4rem;
+
+      .btnCTA {
+        font-size: 1.2rem;
+        word-spacing: -2.5px;
+      }
+
+      .icon__openMenu {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+    }
+  }
+}
+
+//height below 290px (>200%)
+@media (max-height: 18.125em) {
+  .NavigationBar__Container {
+    .buttonBox {
+      .btnMenu[data-modal="true"] {
+        position: fixed;
+        top: 2%;
+        right: 3%;
+      }
+    }
+  }
+}

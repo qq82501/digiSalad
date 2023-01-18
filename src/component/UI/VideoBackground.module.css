@@ -1,0 +1,50 @@
+.heroSection__videoBackground {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  border-radius: 0 0 40px 40px;
+  overflow: hidden;
+}
+.heroSection__videoBackground .videoCenterlize {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(125%);
+  overflow: hidden;
+}
+.heroSection__videoBackground .videoCenterlize iframe {
+  aspect-ratio: 16/9;
+  height: 100vh;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+@media (max-height: 36.0625em) {
+  .heroSection__videoBackground {
+    height: 100%;
+  }
+  .heroSection__videoBackground .videoCenterlize {
+    width: 100%;
+    height: 100%;
+    transform: scale(155%);
+  }
+  .heroSection__videoBackground .videoCenterlize iframe {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+  }
+}
+@media (max-height: 14.425em) {
+  .heroSection__videoBackground .videoCenterlize {
+    transform: scale(280%);
+  }
+}
+@media (max-height: 9.015625em) {
+  .heroSection__videoBackground .videoCenterlize {
+    transform: scale(350%);
+  }
+}/*# sourceMappingURL=VideoBackground.module.css.map */

@@ -1,0 +1,114 @@
+@import "../../style/extend";
+@import "../../style/mixin";
+
+.AboutSection__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12.5rem 0 0 0;
+  position: relative;
+  z-index: 100;
+  &::before {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 5%;
+    background-color: #808080;
+    position: absolute;
+    top: 0;
+  }
+  .sectiontitle {
+    position: relative;
+    @extend %sectionHeader;
+    @include styledUnderline(wavy, $primary_color);
+    @include dot($dot_color);
+    margin-bottom: 72.7px;
+  }
+  .video__box {
+    position: relative;
+    width: 66.66%;
+    height: 100%;
+    margin-bottom: 3rem;
+
+    iframe {
+      width: 100%;
+      height: fit-content;
+      aspect-ratio: 16/9;
+    }
+
+    .thumbnailImage {
+      width: 100%;
+    }
+
+    .btn__play {
+      position: absolute;
+      width: 11.66%;
+      height: fit-content;
+      aspect-ratio: 1/1;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      background-color: $primary_color;
+      border: none;
+      cursor: pointer;
+      transform: all 0.3s;
+
+      &:hover {
+        background-color: $primary_color_shadow;
+      }
+
+      .icon__play {
+        width: 40%;
+      }
+    }
+  }
+  .passage {
+    width: 70%;
+    @extend %contentText;
+    text-align: center;
+    padding-bottom: 1.4rem;
+    margin-bottom: 3rem;
+  }
+  .btn__viewMore {
+    margin-bottom: 28.6rem;
+    background: $primary_color;
+    padding: 3.3rem 2.454rem;
+    @extend %primaryBtn;
+    @include lineCreator(2px);
+  }
+  .awardbox {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    bottom: 0%;
+    left: 100%;
+    width: 100%;
+    transform: translateY(50%);
+    transition: all 0.8s ease-out;
+  }
+}
+
+//width below 900px
+@media (max-width: 56.25em) {
+  .AboutSection__container {
+    padding: 25rem 0 25rem 0;
+  }
+}
+
+//height below 327px; ( > 175%)
+@media (max-height: 20.4375em) {
+  .AboutSection__container {
+    padding: 10rem 0 0 0;
+    .awardbox {
+      position: static;
+      transition: unset;
+      transform: unset;
+    }
+    .btn__viewMore {
+      margin-bottom: 8rem;
+      background: $primary_color;
+      padding: 3.3rem 2.454rem;
+    }
+  }
+}

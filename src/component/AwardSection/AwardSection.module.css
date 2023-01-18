@@ -1,0 +1,157 @@
+.AwardSection__container .textbox .sectionTitle {
+  font-size: 2.8rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 3.4rem;
+  letter-spacing: 3.64px;
+  color: #262626;
+}
+
+.AwardSection__container .textbox .passage {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 32.5em) {
+  .AwardSection__container .textbox .sectionTitle {
+    font-size: 2rem;
+    line-height: 2.6rem;
+  }
+}
+@media (max-width: 25.625em) {
+  .AwardSection__container .textbox .sectionTitle {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+  }
+}
+.AwardSection__container .textbox .sectionTitle {
+  font-size: 2.8rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 3.4rem;
+  letter-spacing: 3.64px;
+  color: #262626;
+}
+
+.AwardSection__container .textbox .passage {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 32.5em) {
+  .AwardSection__container .textbox .sectionTitle {
+    font-size: 2rem;
+    line-height: 2.6rem;
+  }
+}
+@media (max-width: 25.625em) {
+  .AwardSection__container .textbox .sectionTitle {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+  }
+}
+.AwardSection__container {
+  width: 93.472%;
+  background-color: #fff;
+  z-index: 50;
+  border-radius: 40px 0 40px 40px;
+  padding: 6.5rem 6.9rem;
+  display: grid;
+  grid-template-columns: 36fr 64fr;
+  -moz-column-gap: 3.7rem;
+       column-gap: 3.7rem;
+  transition: all 1s ease-in-out;
+}
+.AwardSection__container .textbox {
+  display: flex;
+  flex-direction: column;
+  gap: 3.17rem;
+}
+.AwardSection__container .textbox .sectionTitle {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  width: fit-content;
+  position: relative;
+  -o-border-image: url("../../images/wavy.png");
+     border-image: url("../../images/wavy.png");
+  border-width: 0 15px 15px 15px;
+  border-style: solid;
+  border-color: transparent;
+  border-image-repeat: round;
+  border-image-slice: 16;
+  padding: 0 2rem 4px 2rem;
+}
+@media (max-width: 32.5em) {
+  .AwardSection__container .textbox .sectionTitle {
+    border-width: 0 10px 10px 10px;
+    padding: 0 2rem 0 2rem;
+  }
+}
+@media (max-width: 25.625em) {
+  .AwardSection__container .textbox .sectionTitle {
+    border-width: 0 5px 5px 5px;
+    padding: 0 2rem 0 2rem;
+  }
+}
+.AwardSection__container .textbox .sectionTitle::after {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  background-color: #ee6c8a;
+  position: absolute;
+  right: -1rem;
+  bottom: 25%;
+  border-radius: 50%;
+}
+@media (max-width: 32.5em) {
+  .AwardSection__container .textbox .sectionTitle::after {
+    content: "";
+    width: 5px;
+    height: 5px;
+  }
+}
+.AwardSection__container .awardImg__box {
+  padding: 3.3rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-items: flex-start;
+  align-items: center;
+  -moz-column-gap: 3.7rem;
+       column-gap: 3.7rem;
+}
+.AwardSection__container .awardImg__box .awardImage {
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  width: 100%;
+  aspect-ratio: 2/1;
+}
+
+@media (max-width: 68.75em) {
+  .AwardSection__container {
+    grid-template-columns: 45fr 55fr;
+  }
+}
+@media (max-width: 56.25em) {
+  .AwardSection__container {
+    grid-template-columns: unset;
+    grid-template-rows: auto 1fr;
+  }
+}
+@media (max-height: 20.4375em) {
+  .AwardSection__container {
+    width: 100%;
+    padding: 6.5rem 2rem;
+    border-radius: 40px;
+  }
+  .textbox .sectionTitle {
+    align-self: center;
+  }
+}/*# sourceMappingURL=AwardSection.module.css.map */

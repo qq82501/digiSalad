@@ -1,0 +1,61 @@
+@import "../../style/extend";
+
+.heroSection__videoBackground {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  border-radius: 0 0 $large_block_radius $large_block_radius;
+  overflow: hidden;
+
+  .videoCenterlize {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(125%);
+    overflow: hidden;
+
+    //為了不要有黑邊，必須設定aspect-ratio為16/9
+    iframe {
+      aspect-ratio: 16 / 9;
+      height: 100vh;
+      width: fit-content;
+    }
+  }
+}
+
+//height below 577px; (100%)
+@media (max-height: 36.0625em) {
+  .heroSection__videoBackground {
+    height: 100%;
+    .videoCenterlize {
+      width: 100%;
+      height: 100%;
+      transform: scale(155%);
+
+      //為了不要有黑邊，必須設定aspect-ratio為16/9
+      iframe {
+        height: fit-content;
+        width: 100%;
+      }
+    }
+  }
+}
+
+//height below 230.8px; (250%)
+@media (max-height: 14.425em) {
+  .heroSection__videoBackground {
+    .videoCenterlize {
+      transform: scale(280%);
+    }
+  }
+}
+//height below 144.25px; (400%)
+@media (max-height: 9.015625em) {
+  .heroSection__videoBackground {
+    .videoCenterlize {
+      transform: scale(350%);
+    }
+  }
+}

@@ -1,0 +1,73 @@
+@import "../../style/extend";
+@import "../../style/mixin";
+
+.AwardSection__container {
+  width: 93.472%;
+  background-color: #fff;
+  z-index: 50;
+  border-radius: $large_block_radius 0 $large_block_radius $large_block_radius;
+  padding: 6.5rem 6.9rem;
+  display: grid;
+  grid-template-columns: 36fr 64fr;
+  column-gap: 3.7rem;
+  transition: all 1s ease-in-out;
+
+  .textbox {
+    display: flex;
+    flex-direction: column;
+    gap: 3.17rem;
+    .sectionTitle {
+      width: fit-content;
+      position: relative;
+      @extend %sectionHeader;
+      @include styledUnderline(wavy, $primary_color);
+      @include dot($dot_color);
+    }
+    .passage {
+      @extend %contentText;
+    }
+  }
+
+  .awardImg__box {
+    padding: 3.3rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: flex-start;
+    align-items: center;
+    column-gap: 3.7rem;
+    .awardImage {
+      height: min-content;
+      width: 100%;
+      aspect-ratio: 2/1;
+    }
+  }
+}
+
+//width below 1100px
+@media (max-width: 68.75em) {
+  .AwardSection__container {
+    grid-template-columns: 45fr 55fr;
+  }
+}
+//width below 900px
+@media (max-width: 56.25em) {
+  .AwardSection__container {
+    grid-template-columns: unset;
+    grid-template-rows: auto 1fr;
+  }
+}
+
+//height below 327px; ( > 175%)
+@media (max-height: 20.4375em) {
+  .AwardSection__container {
+    width: 100%;
+    padding: 6.5rem 2rem;
+    border-radius: $large_block_radius;
+  }
+  .textbox {
+    .sectionTitle {
+      align-self: center;
+    }
+  }
+}

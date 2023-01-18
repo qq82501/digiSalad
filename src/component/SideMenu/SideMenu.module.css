@@ -69,10 +69,10 @@
 .sideMenu__Container .col:nth-child(1) .singleMenu__box:nth-child(2) {
   height: 34.042vh;
 }
-.sideMenu__Container .col:nth-child(1) .singleMenu__box:nth-child(2) button {
+.sideMenu__Container .col:nth-child(1) .singleMenu__box:nth-child(2) a {
   align-items: end;
 }
-.sideMenu__Container .col:nth-child(1) .singleMenu__box:nth-child(2) button h2::after {
+.sideMenu__Container .col:nth-child(1) .singleMenu__box:nth-child(2) a h2::after {
   background-color: #26c6d0;
 }
 .sideMenu__Container .col:nth-child(2) {
@@ -84,7 +84,7 @@
 .sideMenu__Container .col:nth-child(2) .singleMenu__box:nth-child(1) {
   height: 45.744vh;
 }
-.sideMenu__Container .col:nth-child(2) .singleMenu__box:nth-child(1) button {
+.sideMenu__Container .col:nth-child(2) .singleMenu__box:nth-child(1) a {
   flex-direction: column;
   align-items: flex-start;
   justify-content: end;
@@ -92,7 +92,7 @@
 .sideMenu__Container .col:nth-child(2) .singleMenu__box:nth-child(2) {
   height: 29.787vh;
 }
-.sideMenu__Container .col:nth-child(2) .singleMenu__box:nth-child(2) button {
+.sideMenu__Container .col:nth-child(2) .singleMenu__box:nth-child(2) a {
   flex-direction: column;
   align-items: flex-start;
   justify-content: end;
@@ -106,7 +106,7 @@
 .sideMenu__Container .col:nth-child(3) .singleMenu__box:nth-child(1) {
   height: 35.319vh;
 }
-.sideMenu__Container .col:nth-child(3) .singleMenu__box:nth-child(1) button {
+.sideMenu__Container .col:nth-child(3) .singleMenu__box:nth-child(1) a {
   flex-direction: column;
   align-items: flex-start;
   justify-content: end;
@@ -125,14 +125,14 @@
 }
 
 @media (max-height: 42.5em) {
-  .sideMenu__Container .col:nth-child(2) .singleMenu__box:nth-child(2) button {
+  .sideMenu__Container .col:nth-child(2) .singleMenu__box:nth-child(2) a {
     flex-direction: row;
     align-items: flex-end;
     justify-content: flex-start;
   }
 }
 @media (max-width: 77.5em) and (max-height: 42.5em) {
-  .sideMenu__Container .col:nth-child(2) .singleMenu__box:nth-child(2) button {
+  .sideMenu__Container .col:nth-child(2) .singleMenu__box:nth-child(2) a {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-end;
@@ -171,7 +171,7 @@
   .sideMenu__Container .col:nth-child(2) .singleMenu__box:nth-child(1) {
     height: 100%;
   }
-  .sideMenu__Container .col:nth-child(2) .singleMenu__box:nth-child(1) button {
+  .sideMenu__Container .col:nth-child(2) .singleMenu__box:nth-child(1) a {
     flex-direction: row;
     align-items: flex-end;
     justify-content: flex-start;
@@ -179,7 +179,7 @@
   .sideMenu__Container .col:nth-child(2) .singleMenu__box:nth-child(2) {
     height: 100%;
   }
-  .sideMenu__Container .col:nth-child(2) .singleMenu__box:nth-child(2) button {
+  .sideMenu__Container .col:nth-child(2) .singleMenu__box:nth-child(2) a {
     flex-direction: row;
     align-items: flex-end;
     justify-content: flex-start;
@@ -190,7 +190,7 @@
   .sideMenu__Container .col:nth-child(3) .singleMenu__box:nth-child(1) {
     height: 100%;
   }
-  .sideMenu__Container .col:nth-child(3) .singleMenu__box:nth-child(1) button {
+  .sideMenu__Container .col:nth-child(3) .singleMenu__box:nth-child(1) a {
     flex-direction: row;
     align-items: end;
     justify-content: start;

@@ -27,7 +27,17 @@ function Modal(props) {
 export default Modal;
 
 function Overlap(props) {
-  return <div className={styles.overlap__container}>{props.children}</div>;
+  const ctxModal = useContext(ModalContext);
+  return (
+    <div
+      className={styles.overlap__container}
+      style={
+        ctxModal.isModalOpen ? { overflowY: "auto" } : { overflowY: "hidden" }
+      }
+    >
+      {props.children}
+    </div>
+  );
 }
 function Backdrop(props) {
   return (

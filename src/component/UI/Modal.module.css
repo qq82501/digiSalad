@@ -31,11 +31,9 @@
 .closeModal__active {
   -webkit-animation: fade-out 0.3s ease-in;
           animation: fade-out 0.3s ease-in;
-  opacity: 0;
 }
 
 .closeModal__done {
-  opacity: 0;
   transform: translateY(100%);
 }
 
@@ -69,7 +67,7 @@
   }
   100% {
     opacity: 0;
-    transform: translate(100%, 100%);
+    transform: translate(0%, 100%);
   }
 }
 @keyframes fade-out {
@@ -79,6 +77,6 @@
   }
   100% {
     opacity: 0;
-    transform: translate(100%, 100%);
+    transform: translate(0%, 100%);
   }
 }/*# sourceMappingURL=Modal.module.css.map */
